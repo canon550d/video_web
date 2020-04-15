@@ -1,0 +1,24 @@
+{
+	"pages":{"records":58, "prevPage":1, "page":1, "nextPage":2, "lastPage":3, "limit":10},
+	"list":[{
+		"id":1,
+		"img":"/static/cover/10himitsu46.jpg",
+		"desc":"cao"
+	},{
+		"id":2,
+		"img":"/static/cover/fukyowaon46.jpg",
+		"desc":"cao"
+	},{
+		"id":3,
+		"img":"/static/cover/theseusnofune46.jpg",
+		"desc":"cao"
+	},{
+		"id":4,
+		"img":"/static/cover/p2593425514.webp",
+		"desc":"cao"
+	},{
+		"id":5,
+		"img":"/static/cover/Zettaireido4666.jpg",
+		"desc":"cao"
+	}]
+}

@@ -1,9 +1,14 @@
 <template>
 <div>
-111111111111111
+<el-breadcrumb separator="/">
+  <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
+  <el-breadcrumb-item>电视剧</el-breadcrumb-item>
+</el-breadcrumb>
+
 <el-row :gutter="20">
-  <el-col :span="6" v-for="d in list" >
+  <el-col :span="6" v-for="(d,index) in list" :key="index">
     <el-card :body-style="{ padding: '0px' }">
+    <router-link to="/todo">
       <img :src="d.img" class="image">
       <div style="padding: 14px;">
         <span>{{d.desc}}</span>
@@ -12,9 +17,11 @@
           <el-button type="text" class="button">操作按钮</el-button>
         </div>
       </div>
+    </router-link>
     </el-card>
   </el-col>
 </el-row>
+
 </div>
 </template>
 
@@ -61,11 +68,14 @@ export default {
       currentDate: new Date()
     };
   },
+  created () {
+    this.$emit('callBackInfo','2');
+  },
   mounted () {
     axios
-      .get('http://localhost/test/vue/drama.json')
+      .get('/static/drama.json')
       .then(response => {
-        this.list = response.data.result.list;
+        this.list = response.data.list;
       })
       .catch(function (error) {
         console.log(error);

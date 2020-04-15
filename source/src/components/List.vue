@@ -72,9 +72,9 @@ export default {
   },
   mounted () {
     axios
-      .get('http://localhost/test/vue/list.json')
+      .get('/static/list.json')
       .then(response => {
-        this.list = response.data.result.list;
+        this.list = response.data.list;
       })
       .catch(function (error) {
         console.log(error);
