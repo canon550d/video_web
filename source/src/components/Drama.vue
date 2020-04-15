@@ -8,7 +8,7 @@
 <el-row :gutter="20">
   <el-col :span="6" v-for="(d,index) in list" :key="index">
     <el-card :body-style="{ padding: '0px' }">
-    <router-link to="/todo">
+    <router-link :to="{name:'View',params:{id: d.id }}">
       <img :src="d.img" class="image">
       <div style="padding: 14px;">
         <span>{{d.desc}}</span>
